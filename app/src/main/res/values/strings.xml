@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">MyWeatherApp</string>
+
+    <string name="greetings">Hello all</string>
+    <string name="text">Text</string>
+    <string name="hello">Hello World!</string>
+    <string name="data_class_button">Data Class Button</string>
+    <string name="data_copy_class_button">Copy Data</string>
+    <string name="object_class_button">Object sample</string>
+</resources>
