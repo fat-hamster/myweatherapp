@@ -37,7 +37,7 @@ class MainFragment : Fragment() {
     }
 
     private fun renderData(appState: AppState) {
-        when(appState) {
+        when (appState) {
             is AppState.Success -> {
                 val weatherData = appState.weatherData
                 binding.loadingLayout.visibility = View.GONE
@@ -58,17 +58,30 @@ class MainFragment : Fragment() {
 
     private fun setData(weatherData: Weather) {
         binding.locationName.text = weatherData.city.city
-        // TODO: разобраться как вместо if-else использовать when()
-        if(weatherData.clouds.intensity == Intensity.NONE) {
-            binding.weatherIcon.setImageResource(R.drawable.sun_icon)
-            binding.weatherText.text = "Ясно"
-        } else if(weatherData.clouds.intensity == Intensity.LOW) {
-            binding.weatherIcon.setImageResource(R.drawable.sun_cloudy_icon)
-            binding.weatherText.text = "Облачно"
+        when (weatherData.clouds.intensity) {
+            Intensity.NONE -> {
+                binding.weatherIcon.setImageResource(R.drawable.sun_icon)
+                binding.weatherText.text = getString(R.string.clear)
+            }
+            Intensity.LOW -> {
+                binding.weatherIcon.setImageResource(R.drawable.sun_cloudy_icon)
+                binding.weatherText.text = getString(R.string.partly_cloudy)
+            }
+            Intensity.REGULAR, Intensity.HIGH -> {
+                binding.weatherIcon.setImageResource(R.drawable.cloudy_icon)
+                binding.weatherText.text = getString(R.string.cloudy)
+            }
         }
-        (weatherData.temperature.toString() + "°C").also { binding.temperature.text = it }
-        (weatherData.wind.speed.toString() + " м/с").also { binding.windyText.text = it }
-        (weatherData.humidity.toString() + " %").also { binding.waterText.text = it }
+        // TODO: реализовать настройки и добавить выбор едениц измерения
+        (weatherData.temperature.toString() + getString(R.string.celcius)).also {
+            binding.temperature.text = it
+        }
+        (weatherData.wind.speed.toString() + getString(R.string.ms)).also {
+            binding.windyText.text = it
+        }
+        (weatherData.humidity.toString() + getString(R.string.percent)).also {
+            binding.waterText.text = it
+        }
     }
 
     override fun onDestroy() {

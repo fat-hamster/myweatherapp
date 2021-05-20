@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -12,10 +11,10 @@
     -->
 
     <LinearLayout
+        android:id="@+id/mainView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:id="@+id/mainView"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
@@ -31,6 +30,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_weight="1"
+                android:contentDescription="@string/location"
                 android:src="@drawable/location_icon" />
 
             <TextView
@@ -40,7 +40,7 @@
                 android:layout_marginStart="10dp"
                 android:layout_marginTop="20dp"
                 android:layout_weight="1"
-                android:text="CityName" />
+                android:text="@string/cityname" />
 
             <Space
                 android:layout_width="wrap_content"
@@ -53,6 +53,8 @@
                 android:layout_height="24dp"
                 android:layout_marginTop="20dp"
                 android:layout_weight="1"
+                android:contentDescription="@string/calendar"
+                android:paddingStart="0dp"
                 android:paddingEnd="10dp"
                 android:src="@drawable/calendar_icon" />
 
@@ -69,6 +71,7 @@
                 android:layout_height="200dp"
                 android:layout_gravity="center_horizontal|center_vertical"
                 android:layout_marginTop="20dp"
+                android:contentDescription="@string/weather"
                 android:src="@drawable/sun_cloudy_icon" />
 
             <TextView
@@ -77,7 +80,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="10dp"
                 android:gravity="center_horizontal"
-                android:text="Cloudy"
+                android:text="@string/cloudy"
                 android:textSize="20sp" />
 
             <TextView
@@ -86,7 +89,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="20dp"
                 android:gravity="center"
-                android:text="24°C"
+                android:text="@string/_24_c"
                 android:textSize="68sp" />
 
             <LinearLayout
@@ -100,7 +103,9 @@
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     android:layout_weight="1"
+                    android:contentDescription="@string/windy"
                     android:paddingStart="60dp"
+                    android:paddingEnd="0dp"
                     android:src="@drawable/windy_icon" />
 
                 <TextView
@@ -108,7 +113,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="5 м/с"
+                    android:text="@string/_5"
                     android:textSize="14sp" />
 
                 <ImageView
@@ -116,7 +121,9 @@
                     android:layout_width="22dp"
                     android:layout_height="22dp"
                     android:layout_weight="1"
-                    android:paddingLeft="75dp"
+                    android:contentDescription="@string/water"
+                    android:paddingStart="75dp"
+                    android:paddingEnd="0dp"
                     android:src="@drawable/water_icon" />
 
                 <TextView
@@ -124,7 +131,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
-                    android:text="47%"
+                    android:text="@string/_47"
                     android:textSize="14sp" />
             </LinearLayout>
 
@@ -140,7 +147,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Mon, 19 Sep"
+                    android:text="@string/mon_19_sep"
                     android:textSize="16sp" />
 
                 <TextView
@@ -149,7 +156,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Tue, 20 Sep"
+                    android:text="@string/tue_20_sep"
                     android:textSize="16sp" />
 
                 <TextView
@@ -158,7 +165,7 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:gravity="center_horizontal"
-                    android:text="Wed, 21 Sep"
+                    android:text="@string/wed_21_sep"
                     android:textSize="16sp" />
             </LinearLayout>
 
@@ -173,6 +180,7 @@
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:layout_weight="1"
+                    android:contentDescription="@string/tomorrow"
                     android:src="@drawable/rain_icon" />
 
                 <ImageView
@@ -180,6 +188,7 @@
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:layout_weight="1"
+                    android:contentDescription="@string/after_tomorrow"
                     android:src="@drawable/snow_icon" />
 
                 <ImageView
@@ -187,6 +196,7 @@
                     android:layout_width="36dp"
                     android:layout_height="36dp"
                     android:layout_weight="1"
+                    android:contentDescription="@string/after_tomorrow2"
                     android:src="@drawable/sun_icon" />
 
             </LinearLayout>
