@@ -7,4 +7,26 @@
     <string name="data_class_button">Data Class Button</string>
     <string name="data_copy_class_button">Copy Data</string>
     <string name="object_class_button">Object sample</string>
+    <string name="clear">Clear</string>
+    <string name="partly_cloudy">Partly cloudy</string>
+    <string name="cloudy">Cloudy</string>
+    <string name="celcius">°C</string>
+    <string name="ms">\" м/с\"</string>
+    <string name="percent">\" %\"</string>
+    <string name="location">location</string>
+    <string name="cityname">CityName</string>
+    <string name="calendar">calendar</string>
+    <string name="weather">weather</string>
+    <string name="cloudy">Cloudy</string>
+    <string name="_24_c">24°C</string>
+    <string name="_5">5 м/с</string>
+    <string name="water">water</string>
+    <string name="_47">47%</string>
+    <string name="mon_19_sep">Mon, 19 Sep</string>
+    <string name="tue_20_sep">Tue, 20 Sep</string>
+    <string name="wed_21_sep">Wed, 21 Sep</string>
+    <string name="tomorrow">tomorrow</string>
+    <string name="after_tomorrow">after_tomorrow</string>
+    <string name="after_tomorrow2">after tomorrow 2</string>
+    <string name="windy">windy</string>
 </resources>
